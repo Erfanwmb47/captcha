@@ -1,6 +1,8 @@
 {
     "name": "erfanwmb/captcha",
     "description": "This package is for captcha",
+    "keywords": ["captcha","hcaptcha","gd","recaptcha"],
+
     "authors": [
         {
             "name": "erfan ghalibaf",
