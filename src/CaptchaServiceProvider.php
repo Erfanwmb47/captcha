@@ -1,0 +1,34 @@
+<?php
+
+namespace packages\captcha;
+
+use Illuminate\Support\ServiceProvider;
+
+class CaptchaServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        $this->app->singleton('captcha',function (){
+            return new captcha;
+        });
+
+
+
+        $this->mergeConfigFrom(__DIR__.'\config\captcha.php','captcha');
+    }
+
+    public function boot()
+    {
+
+
+        $this->loadViewsFrom(__DIR__.'\resources\view','captcha');
+
+        $this->publishes([
+            __DIR__.'/config/captcha.php'                        => config_path('captcha.php'),
+            __DIR__.'/resources/view'                            => base_path('resources/views/captcha'),
+            __DIR__.'/app/Rules/Captcha'                         =>app_path('Rules/Captcha')
+        ]);
+
+
+    }
+}

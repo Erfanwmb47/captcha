@@ -1,0 +1,17 @@
+{
+    "name": "mania/captcha",
+    "description": "This package is for captcha",
+    "authors": [
+        {
+            "name": "erfan ghalibaf",
+            "email": "erfanwmb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "package\\captch\\" : "src/"
+        }
+    },
+    "require": {
+    }
+}
