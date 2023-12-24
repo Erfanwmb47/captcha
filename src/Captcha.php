@@ -13,8 +13,6 @@ class captcha{
         //var_dump($this->font);
         $code = Self::createCode($characters);
         Session::put('g-recaptcha-response',$code);
-
-        // Session::put('security_code',$code);
         /* font size will be 75% of the image height */
         $font_size = $height * 0.3;
         $image = @imagecreate($width, $height) or die('Cannot initialize new GD image stream');
