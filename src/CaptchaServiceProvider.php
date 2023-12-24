@@ -14,22 +14,21 @@ class CaptchaServiceProvider extends ServiceProvider
         });
 
 
-
-        $this->mergeConfigFrom(__DIR__.'\config\captcha.php','captcha');
+        $this->mergeConfigFrom(__DIR__.'\\..\\config\captcha.php','captcha');
     }
 
     public function boot()
     {
 
 
-        $this->loadViewsFrom(__DIR__.'\resources\view','captcha');
+        $this->loadViewsFrom(__DIR__.'\\..\\resources\view','captcha');
 
         $this->publishes([
-            __DIR__.'/config/captcha.php'                        => config_path('captcha.php'),
+            __DIR__.'\\..\\config\captcha.php' => config_path('captcha.php'),
         ],'config');
 
         $this->publishes([
-            __DIR__.'/resources/view'                            => base_path('resources/views/captcha'),
+            __DIR__ . '\\..\\resources/view' => base_path('resources/views/captcha'),
         ],'views');
 
 
