@@ -11,19 +11,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "package\\captch\\" : "src/"
+            "erfanwmb\\captcha\\" : "src/"
         }
     },
     "require": {
         "php": "^8.0"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
 
         "laravel": {
             "providers": [
-                "erfanwmb\\Captcha\\CaptchaServiceProvider"
+                "erfanwmb\\captcha\\CaptchaServiceProvider"
             ],
             "aliases": {
                 "captcha": "erfanwmb\\captcha\\CaptchaFacade"

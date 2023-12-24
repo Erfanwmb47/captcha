@@ -4,7 +4,7 @@ return [
 
     /*
 |--------------------------------------------------------------------------
-| Captcha Connections
+| captcha Connections
 |--------------------------------------------------------------------------
 |
 |   Here you can choose what captcha you want

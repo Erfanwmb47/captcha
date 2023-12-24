@@ -1,4 +1,4 @@
-@inject('obj','packages\captcha\captcha')
+@inject('obj','erfanwmb\captcha\captcha')
 
 <div class="row" style='display: flex;align-items:flex-end;width: 100%;height: 100% ;gap:14px'>
     <div style="flex: 120px 0;margin-bottom: 2px; overflow: hidden; border-radius: 4px">

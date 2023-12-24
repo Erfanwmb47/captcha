@@ -1,6 +1,6 @@
 <?php
 
-namespace packages\captcha;
+namespace erfanwmb\captcha;
 
 use Illuminate\Support\Facades\Session;
 
@@ -9,7 +9,7 @@ class captcha{
     public  function render($width='120',$height='40',$characters='6') {
 
 
-        $font=base_path().'\\packages\\captcha\\assets\\INGEN.TTF';
+        $font=base_path().'\\erfanwmb\\captcha\\assets\\INGEN.TTF';
         //var_dump($this->font);
         $code = Self::createCode($characters);
         Session::put('g-recaptcha-response',$code);

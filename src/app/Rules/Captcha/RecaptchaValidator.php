@@ -1,6 +1,6 @@
 <?php
 
-namespace packages\captcha\app\Rules\Captcha;
+namespace erfanwmb\captcha\app\Rules\Captcha;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;

@@ -1,8 +1,9 @@
 <?php
 
-namespace packages\captcha;
+namespace erfanwmb\captcha;
 
 use Illuminate\Support\ServiceProvider;
+use erfanwmb\captcha\captcha;
 
 class CaptchaServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,6 @@ class CaptchaServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/captcha.php'                        => config_path('captcha.php'),
             __DIR__.'/resources/view'                            => base_path('resources/views/captcha'),
-            __DIR__.'/app/Rules/Captcha'                         =>app_path('Rules/Captcha')
         ]);
 
 

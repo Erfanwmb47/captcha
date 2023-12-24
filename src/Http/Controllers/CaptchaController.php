@@ -1,5 +1,5 @@
 <?php
-namespace packages\captcha\Http\Controllers;
+namespace erfanwmb\captcha\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
@@ -9,7 +9,7 @@ class CaptchaController extends Controller
     public  function render($width='120',$height='40',$characters='6') {
 
 
-        $font=base_path().'\\packages\\captcha\\assets\\INGEN.TTF';
+        $font=base_path().'\\erfanwmb\\captcha\\assets\\INGEN.TTF';
         //var_dump($this->font);
         $code = Self::createCode($characters);
 
