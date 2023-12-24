@@ -1,7 +1,8 @@
 @php($config_root = 'captcha.driver')
 
-@isset($captcha_select)
-    @includeIf("captcha.$captcha")
+@isset($exclusive_captcha)
+    <input type="hidden" name="exclusive_captcha" value="{{$exclusive_captcha}}">
+    @includeIf("captcha.$exclusive_captcha")
 @else
     @foreach(config('captcha.driver') as $key=>$value)
         @if(config('captcha.connection.captcha') == $key)
