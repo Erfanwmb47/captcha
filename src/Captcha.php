@@ -9,8 +9,7 @@ class captcha{
     public  function render($width='120',$height='40',$characters='6') {
 
 
-        $font=__DIR__.'\\erfanwmb\\captcha\\assets\\INGEN.TTF';
-        //var_dump($this->font);
+        $font=__DIR__.'\\..\\'.'\\assets\\INGEN.TTF';
         $code = Self::createCode($characters);
         Session::put('g-recaptcha-response',$code);
         /* font size will be 75% of the image height */
