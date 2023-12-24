@@ -20,8 +20,6 @@ class captcha{
         $background_color = imagecolorallocate($image, 255, 255, 255);
 
         $text_color = imagecolorallocate($image, 70, 40, 200);
-
-        // dd(file_get_contents($font),$this->font);
         /* create textbox and add text */
         $textbox = imagettfbbox($font_size, 0, $font, $code) or die('Error in imagettfbbox function');
         $x = ($width - $textbox[4])/2;
