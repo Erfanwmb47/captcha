@@ -24,8 +24,8 @@ class CaptchaFacade extends Facade{
 
         $laravel_version=explode('.',app()::VERSION)[0];
         switch ($laravel_version){
-            case 8 : return new CaptchaValidator8($exclusive_captcha);
-            case 9:
+            case 8 :
+            case 9 : return new CaptchaValidator8($exclusive_captcha);
             case 10 : return new CaptchaValidator10($exclusive_captcha);
         }
     }
