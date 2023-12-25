@@ -37,7 +37,7 @@ class CaptchaValidator implements Rule
                 break;
             default          : abort(404);
         }
-        $validtor->validate($attribute,$value);
+        $validtor->passes($attribute,$value);
     }
 
     /**
