@@ -25,14 +25,11 @@ class CaptchaValidator implements ValidationRule
         switch ($this->validationType){
             case 'gd'        : $validtor = new GdValidator();        $validtor->validate($attribute,$value,$fail);
                 break;
-            case 'hcaptcha'  : $validtor = new HcaptchaValidator($value);        $validtor->validate($attribute,$value,$fail);
+            case 'hcaptcha'  : $validtor = new HcaptchaValidator();        $validtor->validate($attribute,$value,$fail);
                 break;
-            case 'recaptcha' : $validtor = new RecaptchaValidator($value);        $validtor->validate($attribute,$value,$fail);
+            case 'recaptcha' : $validtor = new RecaptchaValidator();        $validtor->validate($attribute,$value,$fail);
                 break;
             default          : $fail('the :attribute failed,make sure your config is correct or you call right validation');
         }
-
-
-
     }
 }

@@ -23,7 +23,7 @@ class RecaptchaValidator implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes($attribute, $value) : bool
     {
             $data =[
                 'secret'        =>  config('captcha.driver.recaptcha.SECURITY_RECAPTCHA_SECRET_KEY'),

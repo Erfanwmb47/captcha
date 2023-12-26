@@ -26,18 +26,14 @@ class CaptchaValidator implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes($attribute, $value) : bool
     {
         switch ($this->validationType){
-            case 'gd'        : $validtor = new GdValidator();
-                break;
-            case 'hcaptcha'  : $validtor = new HcaptchaValidator($value);
-                break;
-            case 'recaptcha' : $validtor = new RecaptchaValidator($value);
-                break;
+            case 'gd'        : return new GdValidator();
+            case 'hcaptcha'  : return new HcaptchaValidator($value);
+            case 'recaptcha' : return new RecaptchaValidator($value);
             default          : abort(404);
         }
-        $validtor->passes($attribute,$value);
     }
 
     /**
@@ -45,7 +41,7 @@ class CaptchaValidator implements Rule
      *
      * @return string
      */
-    public function message()
+    public function message(): string
     {
         return 'The validation error message.';
     }
