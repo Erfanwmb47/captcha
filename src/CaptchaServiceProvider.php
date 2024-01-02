@@ -29,7 +29,7 @@ class CaptchaServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '\\..\\resources/view' => base_path('resources/views/captcha'),
-        ],'views');
+        ],'captcha-views');
 
 
     }
