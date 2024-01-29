@@ -2,6 +2,7 @@
 
 namespace erfanwmb\captcha;
 
+use Illuminate\Routing\Route;
 use Illuminate\Support\ServiceProvider;
 use erfanwmb\captcha\captcha;
 
@@ -19,6 +20,7 @@ class CaptchaServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        $this->loadRoutesFrom(__DIR__.'\\..\\route\web.php');
 
 
         $this->loadViewsFrom(__DIR__.'\\..\\resources\view','captcha');
