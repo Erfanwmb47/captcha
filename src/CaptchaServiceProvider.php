@@ -18,7 +18,7 @@ class CaptchaServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'\\..\\config\captcha.php','captcha');
     }
 
-    public function boot()
+    public function boot(): void
     {
         $this->loadRoutesFrom(__DIR__.'\\..\\route\web.php');
 
