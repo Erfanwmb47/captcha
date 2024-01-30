@@ -11,7 +11,7 @@ class captcha{
 
         $font=__DIR__.'\\..\\'.'\\assets\\INGEN.TTF';
         $code = Self::createCode($characters);
-        Session::put('g-recaptcha-response',$code);
+        session(['g-recaptcha-response',$code]);
         /* font size will be 75% of the image height */
         $font_size = $height * 0.3;
         $image = @imagecreate($width, $height) or die('Cannot initialize new GD image stream');
@@ -28,7 +28,7 @@ class captcha{
         /* output captcha image to browser  Download By www.vebscript.com */
 //        header('Content-Type: image/jpeg');
 //
-//        dd('ya zeinab');
+
 
 
         ob_start();

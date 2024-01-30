@@ -26,7 +26,7 @@ class GdValidator implements Rule
      */
     public function passes($attribute, $value) : bool
     {
-        return Session::get('g-recaptcha-response') == $value;
+        return session('g-recaptcha-response') == $value;
     }
 
     /**
