@@ -22,6 +22,7 @@ class CaptchaValidator implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
+
         switch ($this->validationType){
             case 'gd'        : $validtor = new GdValidator();        $validtor->validate($attribute,$value,$fail);
                 break;

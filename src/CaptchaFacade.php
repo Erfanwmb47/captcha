@@ -26,6 +26,7 @@ class CaptchaFacade extends Facade{
         //TODO validation required here
         if (is_null($config)) return true;
         $laravel_version=explode('.',app()::VERSION)[0];
+
         switch ($laravel_version){
             case 8 :
             case 9 : return new CaptchaValidator8($exclusive_captcha);

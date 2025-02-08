@@ -17,7 +17,9 @@ class GdValidator implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
+       dd($attribute,$value,$fail,\session()->all());
 
         if (session('g-recaptcha-response') != $value) $fail('the :attribute is not match');
     }
+
 }
